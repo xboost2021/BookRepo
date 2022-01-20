@@ -1,4 +1,4 @@
-import numpy as np
+import numpy  as np
 import pandas as pd
 
 ## utilities
@@ -8,7 +8,7 @@ import os
 def write_eval(pred, label, save_dir, mode, epoch):
   if not os.path.exists(save_dir):
     os.makedirs(save_dir)
-    
+
   pred_df  = pd.DataFrame(pred)
   label_df = pd.DataFrame(label)
   pred_df.to_csv( os.path.join(save_dir, '%s_pred%d.csv'  % (mode, epoch)))
